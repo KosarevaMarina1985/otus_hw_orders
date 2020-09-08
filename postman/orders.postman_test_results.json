@@ -1,0 +1,350 @@
+{
+	"id": "8448baab-3fd5-4986-8a0f-e7eced5bbaac",
+	"name": "orders",
+	"timestamp": "2020-09-08T10:28:41.416Z",
+	"collection_id": "6772a3a3-7ed5-4190-abe7-391c2bf4cc10",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 10,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5d26634b-bd8e-480a-93e3-e670ea56f51c",
+			"name": "Создание пользователя",
+			"url": "http://arch.homework/user",
+			"time": 459,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				459
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6d596f1e-4648-416a-a5e2-6c54374e7521",
+			"name": "Проверка, что пользователь создался",
+			"url": "http://arch.homework/user/15",
+			"time": 466,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Пользователь создан": true
+			},
+			"testPassFailCounts": {
+				"Пользователь создан": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				466
+			],
+			"allTests": [
+				{
+					"Пользователь создан": true
+				}
+			]
+		},
+		{
+			"id": "dce8a25a-b41b-4c5e-ae2f-c7790908a8eb",
+			"name": "Проверка, что аккаунт создался с 0 балансом",
+			"url": "http://arch.homework/billing/balance/15",
+			"time": 238,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Balance = 0": true
+			},
+			"testPassFailCounts": {
+				"Balance = 0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				238
+			],
+			"allTests": [
+				{
+					"Balance = 0": true
+				}
+			]
+		},
+		{
+			"id": "1a4be4da-3901-4d8d-bbbb-48f23a5de456",
+			"name": "Добавить деньги пользователю",
+			"url": "http://arch.homework/billing/balance/add",
+			"time": 176,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				176
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "41ccb44c-b59a-4d83-86cf-235967e0e7be",
+			"name": "Проверить, что деньги добавились",
+			"url": "http://arch.homework/billing/balance/15",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Balance = 15": true
+			},
+			"testPassFailCounts": {
+				"Balance = 15": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Balance = 15": true
+				}
+			]
+		},
+		{
+			"id": "a6247169-c230-4608-af88-3ff7a9fab241",
+			"name": "Создание заказа, денег хватает",
+			"url": "http://arch.homework/order/create",
+			"time": 537,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				537
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2166d6ee-09aa-41a0-92e9-94f199891f3b",
+			"name": "Проверка, что баланс уменьшился",
+			"url": "http://arch.homework/billing/balance/15",
+			"time": 352,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Balance = 5": true
+			},
+			"testPassFailCounts": {
+				"Balance = 5": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				352
+			],
+			"allTests": [
+				{
+					"Balance = 5": true
+				}
+			]
+		},
+		{
+			"id": "2db7bd25-126d-41ea-8095-83ef9da75755",
+			"name": "Проверка, что пришло письмо счастья",
+			"url": "http://arch.homework/notification/15",
+			"time": 282,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Тип сообщения = positive": true
+			},
+			"testPassFailCounts": {
+				"Тип сообщения = positive": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				282
+			],
+			"allTests": [
+				{
+					"Тип сообщения = positive": true
+				}
+			]
+		},
+		{
+			"id": "dc46dad8-1052-4332-9d6a-b9dd702b458b",
+			"name": "Создание заказа, денег не хватает",
+			"url": "http://arch.homework/order/create",
+			"time": 499,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				499
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "86382f2d-23cb-41b3-bbe6-5e397f22394a",
+			"name": "Проверка, что баланс не изменился",
+			"url": "http://arch.homework/billing/balance/15",
+			"time": 411,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Balance = 5": true
+			},
+			"testPassFailCounts": {
+				"Balance = 5": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				411
+			],
+			"allTests": [
+				{
+					"Balance = 5": true
+				}
+			]
+		},
+		{
+			"id": "e7eb0212-5f9d-455a-87de-beae075d735c",
+			"name": "Проверка, что пришло письмо горя",
+			"url": "http://arch.homework/notification/16",
+			"time": 321,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Тип сообщения = negative": true
+			},
+			"testPassFailCounts": {
+				"Тип сообщения = negative": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				321
+			],
+			"allTests": [
+				{
+					"Тип сообщения = negative": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3788,
+	"collection": {
+		"requests": [
+			{
+				"id": "5d26634b-bd8e-480a-93e3-e670ea56f51c",
+				"method": "POST"
+			},
+			{
+				"id": "6d596f1e-4648-416a-a5e2-6c54374e7521",
+				"method": "GET"
+			},
+			{
+				"id": "dce8a25a-b41b-4c5e-ae2f-c7790908a8eb",
+				"method": "GET"
+			},
+			{
+				"id": "1a4be4da-3901-4d8d-bbbb-48f23a5de456",
+				"method": "PUT"
+			},
+			{
+				"id": "41ccb44c-b59a-4d83-86cf-235967e0e7be",
+				"method": "GET"
+			},
+			{
+				"id": "a6247169-c230-4608-af88-3ff7a9fab241",
+				"method": "POST"
+			},
+			{
+				"id": "2166d6ee-09aa-41a0-92e9-94f199891f3b",
+				"method": "GET"
+			},
+			{
+				"id": "2db7bd25-126d-41ea-8095-83ef9da75755",
+				"method": "GET"
+			},
+			{
+				"id": "dc46dad8-1052-4332-9d6a-b9dd702b458b",
+				"method": "POST"
+			},
+			{
+				"id": "86382f2d-23cb-41b3-bbe6-5e397f22394a",
+				"method": "GET"
+			},
+			{
+				"id": "e7eb0212-5f9d-455a-87de-beae075d735c",
+				"method": "GET"
+			}
+		]
+	}
+}
